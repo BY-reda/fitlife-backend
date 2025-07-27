@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Push-up",
+      "description": "An exercise for upper body strength, targeting chest, shoulders, and triceps.",
+      "muscleGroup": "Chest",
+      "videoUrl": "https://example.com/push-up-video"
+    },
+    {
+      "name": "Squat",
+      "description": "A lower body exercise targeting the thighs, hips, and buttocks.",
+      "muscleGroup": "Legs",
+      "videoUrl": "https://example.com/squat-video"
+    },
+    {
+      "name": "Bicep Curl",
+      "description": "An exercise targeting the biceps muscles.",
+      "muscleGroup": "Arms",
+      "videoUrl": "https://example.com/bicep-curl-video"
+    },
+    {
+      "name": "Plank",
+      "description": "An exercise for core stability and strength.",
+      "muscleGroup": "Core",
+      "videoUrl": "https://example.com/plank-video"
+    }
+  ]
+  
