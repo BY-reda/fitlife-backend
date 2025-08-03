@@ -35,10 +35,18 @@ const getPostsByUser = async (req, res) => {
 // CREATE new post
 const createPost = async (req, res) => {
   try {
+    const text = req.body.text?.trim() || '';
+    const imageUrl = req.file ? `uploads/${req.file.filename}` : '';
+
+    // 🔴 Check: reject if both are empty
+    if (!text && !imageUrl) {
+      return res.status(400).json({ message: "Text or image required" });
+    }
+
     const newPost = new Post({
       user: req.user._id,
-      text: req.body.text,
-      imageUrl: req.file ? `uploads/${req.file.filename}` : '',
+      text,
+      imageUrl,
     });
 
     await newPost.save();

@@ -7,6 +7,9 @@ const connectDB = async () => {
         ? process.env.MONGO_URI_ATLAS
         : process.env.MONGO_URI_LOCAL;
 
+    console.log("NODE_ENV:", process.env.NODE_ENV);
+    console.log("Using Mongo URI:", mongoURI);
+
     const conn = await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
