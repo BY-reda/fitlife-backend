@@ -29,13 +29,23 @@ router.post("/signup", async (req, res) => {
 
     res.status(201).json({
       token,
-      user: {
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        profileImage: user.profileImage,
-         role: user.role,
-      },
+ user: {
+  _id: user._id,
+  username: user.username,
+  email: user.email,
+  role: user.role,
+  age: user.age,
+  weight: user.weight,
+  height: user.height,
+  goal: user.goal,
+  bio: user.bio,
+  profileImage: user.profileImage,
+  activityLevel: user.activityLevel,
+  targetCalories: user.targetCalories,
+  followers: user.followers,
+  following: user.following,
+},
+
     });
   } catch (err) {
     console.error("Signup error:", err);
@@ -64,12 +74,22 @@ router.post("/login", async (req, res) => {
     res.json({
       token,
       user: {
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        profileImage: user.profileImage,
-         role: user.role,
-      },
+  _id: user._id,
+  username: user.username,
+  email: user.email,
+  role: user.role,
+  age: user.age,
+  weight: user.weight,
+  height: user.height,
+  goal: user.goal,
+  bio: user.bio,
+  profileImage: user.profileImage,
+  activityLevel: user.activityLevel,
+  targetCalories: user.targetCalories,
+  followers: user.followers,
+  following: user.following,
+},
+
     });
   } catch (err) {
     console.error("Login error:", err);
@@ -111,13 +131,23 @@ router.post("/google", async (req, res) => {
 
     res.json({
       token: jwtToken,
-      user: {
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        profileImage: user.profileImage,
-         role: user.role,
-      },
+ user: {
+  _id: user._id,
+  username: user.username,
+  email: user.email,
+  role: user.role,
+  age: user.age,
+  weight: user.weight,
+  height: user.height,
+  goal: user.goal,
+  bio: user.bio,
+  profileImage: user.profileImage,
+  activityLevel: user.activityLevel,
+  targetCalories: user.targetCalories,
+  followers: user.followers,
+  following: user.following,
+},
+
     });
   } catch (err) {
     console.error("❌ Google login error:", err);

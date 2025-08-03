@@ -35,12 +35,22 @@ const registerUser = async (req, res) => {
     res.status(201).json({
       message: "User registered successfully.",
       token,
-      user: {
-        _id: newUser._id,
-        username: newUser.username,
-        email: newUser.email,
-          role: newUser.role, 
-      },
+  user: {
+  _id: newUser._id,
+  username: newUser.username,
+  email: newUser.email,
+  role: newUser.role,
+  age: newUser.age,
+  weight: newUser.weight,
+  height: newUser.height,
+  goal: newUser.goal,
+  bio: newUser.bio,
+  profileImage: newUser.profileImage,
+  activityLevel: newUser.activityLevel,
+  targetCalories: newUser.targetCalories,
+  followers: newUser.followers,
+  following: newUser.following,
+},
     });
   } catch (error) {
     console.error(error);
@@ -72,11 +82,22 @@ const loginUser = async (req, res) => {
   res.json({
   token,
   user: {
-    _id: user._id,
-    username: user.username,
-    email: user.email,
-    role: user.role,
-  },
+  _id: user._id,
+  username: user.username,
+  email: user.email,
+  role: user.role,
+  age: user.age,
+  weight: user.weight,
+  height: user.height,
+  goal: user.goal,
+  bio: user.bio,
+  profileImage: user.profileImage,
+  activityLevel: user.activityLevel,
+  targetCalories: user.targetCalories,
+  followers: user.followers,
+  following: user.following,
+},
+
 });
   } catch (error) {
     console.error(error);
